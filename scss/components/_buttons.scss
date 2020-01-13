@@ -1,0 +1,52 @@
+
+
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+// exemplifies use of extends and placeholders
+
+//exemplifies use of media query variable
+
+%btn {
+    margin-top: 15px;
+    width: 100%;
+    color: $btn-text;
+    border: none;
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+    @media #{$break-small} {
+        padding: 10px 30px;
+      }
+    
+    }  
+  
+  .btn {
+
+  &.default {
+   @extend %btn;
+    background-color: $color-link;
+  }
+  
+  &.error {
+    @extend %btn;
+    background-color: $color-error;
+  }
+  
+  &.info {
+    @extend %btn;
+    background-color: $color-info;
+  }
+  
+  &.success {
+    @extend %btn;
+    background-color: $color-success ;
+  }
+  
+  &.warning {
+    @extend %btn;
+    background-color: $color-warning;
+  }
+}

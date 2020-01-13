@@ -1,0 +1,50 @@
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+/* There was not a font size designated in the base  - thus it used the default of 16px
+The body selector specifies the 16px font-size in its extend.   
+*/
+body {
+  font-family: 'Lato', sans-serif; 
+  font-weight: 300;
+}
+
+// font size equates to 32px
+.headline-primary {
+  @extend body;
+
+    color: $heading-field ;
+    margin-left: 10px;
+  }
+  
+  // font size equates to 16px
+  .headline-secondary {
+    @extend body;
+
+    font-weight: 300;
+    color: $color-text-base;
+  }
+  
+  .link {
+    @extend body;
+    color: $color-link;
+    font-weight: 700;
+  }
+  
+  // 1.5em  font-size equates to 24px based on the 16px
+
+  .blockquote {
+    @extend body;
+
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $heading-field ;
+    border-radius: 5px;
+  }
+  
+

@@ -1,0 +1,31 @@
+
+
+// Descriptive Color Variables Names
+
+$grey       :#777;
+$teal       :#7ee6fd;
+$green      :#58e1c1;
+$white      :#fff;
+$bluegreen  :#51ddfc;
+$lightpurple:#927bc1;
+$orange-red :#fd7856;
+$red        :#e4757a;
+$lime-green : #63cc82;
+
+// Functional Color Variable Names
+
+$color-text-base    :$grey;
+$color-col4         :$teal;
+$heading-field      :$green;
+$btn-text           :$white;
+$color-link         :$bluegreen;
+$color-info         :$lightpurple;
+$color-warning      :$orange-red;
+$color-error        :$red;
+$color-success      :$lime-green;
+
+
+
+//Media Query Break Point
+$break-tiny     : '(max-width: 320px)';
+$break-small    : '(max-width: 768px)';
