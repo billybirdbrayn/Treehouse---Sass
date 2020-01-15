@@ -391,27 +391,55 @@ template {
 }
 
 /* ============================================= */
-/*              Navigation                       */
+/*              Buttons                          */
 /* ============================================= */
-.nav {
-  padding-left: 0;
-  flex-basis: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-link {
-  text-align: center;
-  border-radius: 5px;
-  padding: 10px 0;
-  display: block;
+.btn.warning, .btn.success, .btn.info, .btn.error, .btn.default {
+  margin-top: 15px;
   width: 100%;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+@media (min-width: 768px) {
+  .btn.warning, .btn.success, .btn.info, .btn.error, .btn.default {
+    padding: 10px 30px;
+  }
 }
 
-.nav-link:hover {
-  color: #fff;
-  background-color: #58e1c1;
+.btn.default {
+  background-color: #51ddfc;
+}
+.btn.default:hover {
+  transition: background-color 1s ease-in;
+  background-color: #9cecfd;
+}
+.btn.error {
+  background-color: #e4757a;
+}
+.btn.error:hover {
+  transition: background-color 1s ease-in;
+  background-color: #d7353c;
+}
+.btn.info {
+  background-color: #927bc1;
+}
+.btn.success {
+  background-color: #63cc82;
+}
+.btn.success:hover {
+  transition: background-color 1s ease-in;
+  background-color: #9ddfb0;
+}
+.btn.warning {
+  background-color: #fd7856;
+}
+
+@media (min-width: 768px) {
+  .btn + .btn {
+    margin-left: 10px;
+  }
 }
 
 /* ============================================= */
@@ -437,6 +465,40 @@ template {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+.nav {
+  padding-left: 0;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.nav-link {
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+@media (min-width: 768px) {
+  .nav-link {
+    flex-basis: 100px;
+  }
+}
+.nav-link:hover {
+  color: #fff;
+  background-color: #58e1c1;
 }
 
 /* ============================================= */
@@ -476,38 +538,11 @@ template {
   margin-right: auto; */
 }
 
-/* ============================================= */
-/*              Buttons                          */
-/* ============================================= */
-.btn.warning, .btn.success, .btn.info, .btn.error, .btn.default {
-  margin-top: 15px;
-  width: 100%;
-  color: #fff;
-  border: none;
-  padding: 10px 0;
-  text-transform: uppercase;
-  border-radius: 5px;
-}
-@media (max-width: 768px) {
-  .btn.warning, .btn.success, .btn.info, .btn.error, .btn.default {
-    padding: 10px 30px;
+@media (min-width: 768px) {
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
   }
-}
-
-.btn.default {
-  background-color: #51ddfc;
-}
-.btn.error {
-  background-color: #e4757a;
-}
-.btn.info {
-  background-color: #927bc1;
-}
-.btn.success {
-  background-color: #63cc82;
-}
-.btn.warning {
-  background-color: #fd7856;
 }
 
 /* ============================================= */
@@ -583,9 +618,6 @@ template {
   flex-basis: 100%;
 }
 
-/* ============================================= */
-/*              Media Queries                    */
-/* ============================================= */
 @media (min-width: 768px) {
   .container {
     max-width: 1400px;
@@ -593,24 +625,32 @@ template {
     margin-left: auto;
     margin-right: auto;
   }
+}
 
+@media (min-width: 768px) {
   .centered {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+}
 
+@media (min-width: 768px) {
   .row {
     flex-direction: row;
   }
+}
 
+@media (min-width: 768px) {
   [class^=col] {
     display: flex;
     justify-content: center;
     margin-top: 0;
     align-items: center;
   }
+}
 
+@media (min-width: 768px) {
   [class^=col] + [class^=col] {
     margin-left: 10px;
   }
@@ -661,30 +701,6 @@ template {
 
   .col-12 {
     flex-basis: 100%;
-  }
-
-  .nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .nav-link {
-    flex-basis: 100px;
-  }
-
-  /*
-  .btn {
-    padding: 10px 30px;
-  }
-  */
-  .btn + .btn {
-    margin-left: 10px;
-  }
-
-  .logo {
-    margin-left: initial;
-    margin-right: initial;
   }
 }
 

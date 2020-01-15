@@ -3,6 +3,8 @@
 /*              Images                           */
 /* ============================================= */
 
+//illustrates the use of Mixin
+
 .img-avatar {
  /* display: block;
   margin-left: auto;
@@ -33,3 +35,10 @@
   margin-left: auto;
   margin-right: auto; */
 }
+
+.logo {
+  @media #{$break-small} {
+    margin-left: initial;
+    margin-right: initial;
+    }
+  }

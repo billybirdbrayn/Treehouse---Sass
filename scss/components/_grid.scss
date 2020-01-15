@@ -4,15 +4,17 @@
 /* ============================================= */
 
 .container {
-  padding: 0 10px;
+  padding: 0 10px; 
   }
   
   .row {
     display: flex;
     flex-direction: column;
     padding: 1em 10px;
+
   }
   
+
   [class^=col] {
     margin-top: 10px;
     flex-basis: 100%;

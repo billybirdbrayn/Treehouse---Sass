@@ -24,8 +24,19 @@ $color-warning      :$orange-red;
 $color-error        :$red;
 $color-success      :$lime-green;
 
+//color function variables
+$color-link-dark: darken($color-link, 15%);
+$color-link-light: lighten($color-link, 15%);
+
+
+$color-success-dark: darken($color-success, 15%);
+$color-success-light: lighten($color-success, 15%);
+
+
+$color-error-dark: darken($color-error, 15%);
+$color-error-light: lighten($color-error, 15%);
 
 
 //Media Query Break Point
-$break-tiny     : '(max-width: 320px)';
-$break-small    : '(max-width: 768px)';
+//break-tiny     : '(min-width: 320px)';
+$break-small    : '(min-width: 768px)';

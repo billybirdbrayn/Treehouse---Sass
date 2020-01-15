@@ -4,9 +4,11 @@
 /*              Buttons                          */
 /* ============================================= */
 
-// exemplifies use of extends and placeholders
+//use of extends and placeholders
 
-//exemplifies use of media query variable
+//media query variable
+
+// Use of color functions.   Variables define the % change
 
 %btn {
     margin-top: 15px;
@@ -20,7 +22,7 @@
     @media #{$break-small} {
         padding: 10px 30px;
       }
-    
+  
     }  
   
   .btn {
@@ -28,11 +30,19 @@
   &.default {
    @extend %btn;
     background-color: $color-link;
+    &:hover {
+      transition: background-color 1s ease-in;
+      background-color: $color-link-light;
+    }
   }
   
   &.error {
     @extend %btn;
     background-color: $color-error;
+    &:hover {
+      transition: background-color 1s ease-in;
+      background-color: $color-error-dark;
+    }
   }
   
   &.info {
@@ -43,6 +53,10 @@
   &.success {
     @extend %btn;
     background-color: $color-success ;
+    &:hover {
+      transition: background-color 1s ease-in;
+      background-color: $color-success-light;
+    }
   }
   
   &.warning {
@@ -50,3 +64,10 @@
     background-color: $color-warning;
   }
 }
+
+
+.btn + .btn {
+  @media #{$break-small} {
+    margin-left: 10px;
+  }
+} 
